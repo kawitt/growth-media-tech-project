@@ -1,14 +1,14 @@
 ---
 # Title, summary, and page position.
-linktitle: Chapter 1
-summary: Learn how to use Wowchemy's docs layout for publishing online courses, software documentation, and tutorials.
+linktitle: 1) Google Ads Conversion Tracking
+summary: Solutions to a broken Google Ads Conversion Tracking tag with Shopify.
 weight: 1
-icon: book
+icon: tags
 icon_pack: fas
 
 # Page metadata.
-title: Chapter 1
-date: "2018-09-09T00:00:00Z"
+title: 1) Google Ads Conversion Tracking
+date: "2022-01-15T00:00:00Z"
 type: book  # Do not modify.
 ---
 
