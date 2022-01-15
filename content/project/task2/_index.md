@@ -2,9 +2,9 @@
 # Title, summary, and page position.
 linktitle: Task 2
 summary: Resolving issues with a Google Sheet weekly report.
-weight: 1
+weight: 2
 icon: google
-icon_pack: fas
+icon_pack: fab
 
 # Page metadata.
 title: Google Sheet Weekly Report Troubleshooting  

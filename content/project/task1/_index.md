@@ -3,7 +3,7 @@
 linktitle: Task 1 
 summary: Solutions to a broken Google Ads Conversion Tracking tag with Shopify.
 weight: 1
-icon: ads
+icon: tags
 icon_pack: fas
 
 # Page metadata.
@@ -14,16 +14,16 @@ type: book  # Do not modify.
 
 {{< list_children >}}
 
-## Task Overview
+### Task Prompt
 
 The client has just created a new Google Ads account, and their Ecommerce platform is Shopify. Below is a broken Google Ads Conversion Tracking Tag. The value parameter should be Order Subtotal (which should not include a currency symbol or any commas), and we will also be including a new parameter, **transaction_id** which will be the Order Number. Revenue is only showing up for orders less than $1,000, and orders are being duplicated. Please help!
 
-## Bonus: 
+### Bonus 
 
 Shopify has a piece of code that only allows a script to fire the first time a page is accessed, can you
 add that as well? 
 
-## Implicit Subtasks
+## Infered Subtasks
 
 Below is a list of tasks derived from the prompt, the relevant text from the prompt, and links to the solutions:
 

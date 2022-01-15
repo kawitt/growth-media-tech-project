@@ -1,6 +1,6 @@
 ---
-title: Syllabus
-linktitle: Syllabus
+title: Google Ads Conversion Tracking - Subtask 2
+linktitle: Subtask 2
 type: book
 date: "2022-01-15T00:00:00+01:00"
 
