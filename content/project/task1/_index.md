@@ -1,6 +1,6 @@
 ---
 # Title, summary, and page position.
-linktitle: Google Ads Conversion Tracking - Shopify Checkout Tag 
+linktitle: Task 1 
 summary: Solutions to a broken Google Ads Conversion Tracking tag with Shopify.
 weight: 1
 icon: ads
@@ -11,6 +11,8 @@ title: Google Ads Conversion Tracking - Shopify Checkout Tag
 date: "2022-01-15T00:00:00Z"
 type: book  # Do not modify.
 ---
+
+{{< list_children >}}
 
 ## Task Overview
 
@@ -29,32 +31,32 @@ Below is a list of tasks derived from the prompt, the relevant text from the pro
 
 > The value parameter should be Order Subtotal (which should not include a currency symbol or any commas).
 
-{{< cta cta_text="Jump to Subtask 1 Solution" cta_link="task1-1" >}}
+{{< cta cta_text="Jump to Subtask 1 Solution" cta_link="subtask1" >}}
 
 2. Set `transaction_id` parameter to **Order Number**.   
 
 > we will also be including a new parameter, **transaction_id** which will be the Order Number
 
-{{< cta cta_text="Jump to Subtask 2 Solution" cta_link="task1-2" >}}
+{{< cta cta_text="Jump to Subtask 2 Solution" cta_link="subtask2" >}}
 
 3. Ensure all revenue amounts are showing.
 
 > Revenue is only showing up for orders less than $1,000
 
-{{< cta cta_text="Jump to Subtask 3 Solution" cta_link="task1-3" >}}
+{{< cta cta_text="Jump to Subtask 3 Solution" cta_link="subtask3" >}}
 
 4. Prevent collection of duplicate orders. 
 
 > orders are being duplicated.
 
-{{< cta cta_text="Jump to Subtask 4 Solution" cta_link="task1-4" >}}
+{{< cta cta_text="Jump to Subtask 4 Solution" cta_link="subtask4" >}}
 
 5. Add code to ensure script only fires the first time a page is accessed.
 
 > **Bonus** Shopify has a piece of code that only allows a script to fire the first time a page is accessed, can you
 add that as well?
 
-{{< cta cta_text="Jump to Subtask 5 (Bonus) Solution" cta_link="task1-5-bonus" >}}
+{{< cta cta_text="Jump to Subtask 5 (Bonus) Solution" cta_link="subtask5-bonus" >}}
 
 ## Code
 

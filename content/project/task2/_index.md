@@ -1,14 +1,14 @@
 ---
 # Title, summary, and page position.
-linktitle: Chapter 2
-summary: Learn how to use Academic's docs layout for publishing online courses, software documentation, and tutorials.
+linktitle: Task 2
+summary: Resolving issues with a Google Sheet weekly report.
 weight: 1
-icon: book-reader
+icon: google
 icon_pack: fas
 
 # Page metadata.
-title: Chapter 2
-date: "2018-09-09T00:00:00Z"
+title: Google Sheet Weekly Report Troubleshooting  
+date: "2022-01-15T00:00:00Z"
 type: book  # Do not modify.
 ---
 
