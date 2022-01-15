@@ -2,8 +2,8 @@
 widget: featurette
 headless: true
 weight: 20
-title: Features
-subtitle: Document _anything_ ✨
+title: Featuresd
+subtitle: Document _sanything_ ✨
 feature:
   - icon: book-open
     icon_pack: fas
@@ -17,4 +17,5 @@ feature:
     icon_pack: fas
     name: Personal Notebook
     description: For yourself
+widget_id: blah
 ---
