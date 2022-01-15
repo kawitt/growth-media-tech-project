@@ -7,6 +7,9 @@ main:
   - name: Home
     url: /
     weight: 10
-  - name: Project
-    url: project/
+  - name: Growth Media Technology Project
+    url: growth-media-technology-project/
+    weight: 20
+  - name: About Me
+    url: about-kyle-witt/
     weight: 20
