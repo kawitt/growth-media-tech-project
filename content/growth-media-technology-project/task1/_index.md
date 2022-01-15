@@ -14,7 +14,7 @@ type: book  # Do not modify.
 
 # Task
 
----
+***
 
 ## Primary
 
@@ -53,7 +53,7 @@ For reference, here is the original code snippet included with the task with som
 
 # Inferred Subtasks
 
----
+***
 
 Below is a list of tasks derived from the prompt, the relevant text from the prompt, and links to the solutions:
 
