@@ -57,29 +57,29 @@ Below is a list of tasks derived from the prompt, the relevant text from the pro
 
 1. Make `value` parameter **Order Subtotal** and remove currency symbol and commas.
 
-[Subtask 1 Solution]({{< relref "./subtask1" >}})
+[Subtask 1 Solution]({{< relref "../subtask1" >}})
 
 > The value parameter should be Order Subtotal (which should not include a currency symbol or any commas).
 
 2. Set `transaction_id` parameter to **Order Number**.   
 
-[Subtask 2 Solution]({{< relref "./subtask2" >}})
+[Subtask 2 Solution]({{< relref "../subtask2" >}})
 
 > Revenue is only showing up for orders less than $1,000
 
 3. Ensure all revenue amounts are showing.
 
-[Subtask 3 Solution]({{< relref "./subtask3" >}})
+[Subtask 3 Solution]({{< relref "../subtask3" >}})
 
 > orders are being duplicated.
 
 4. Prevent collection of duplicate orders. 
 
-[Subtask 4 Solution]({{< relref "./subtask4" >}})
+[Subtask 4 Solution]({{< relref "../subtask4" >}})
 
 > **Bonus** Shopify has a piece of code that only allows a script to fire the first time a page is accessed, can you
 add that as well?
 
 5. Add code to ensure script only fires the first time a page is accessed.
 
-[Subtask 5 Solution]({{< relref "./subtask5" >}})
+[Subtask 5 Solution]({{< relref "../subtask5" >}})
