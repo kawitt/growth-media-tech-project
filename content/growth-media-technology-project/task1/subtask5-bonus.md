@@ -23,7 +23,7 @@ add that as well?{{< /hl >}}
 
 ***
 
-Encapsulate the event snippet with the following Liquid tags: `{% if first_time_accessed %}` and `{% endif %}`.
+Encapsulate the event snippet with the following Liquid **first_time_accessed** property: `{% if first_time_accessed %}` and `{% endif %}`.
 
 ```HTML
 {% if first_time_accessed %}

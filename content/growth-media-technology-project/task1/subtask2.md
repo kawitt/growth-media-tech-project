@@ -49,8 +49,10 @@ We can see in the provided code snippet, the `transaction_id` parameter is actua
 </script> 
 ```
 
-According to Shopify's documentation, **Order Number** is an attribute of both the `checkout` and `order` objects. The available documentation doesn't clarify which object `{{ order_number }}` references. One important caveat with `checkout.order_number`:
+According to Shopify's documentation, **Order Number** is an attribute of both the `checkout` and `order` objects. The available documentation doesn't clarify which object `{{ order_number }}` references. 
 
-> Depending on the payment provider, the order might not have been created yet on the checkout order status page.
+{{% callout warning %}}
+One important caveat with `checkout.order_number` is depending on the payment provider, the order might not have been created yet on the checkout order status page.
+{{% /callout %}}
 
 To ensure the **Order Number** actually exists, we'll use `order.order_number`.

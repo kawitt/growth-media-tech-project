@@ -33,7 +33,7 @@ To:
 
 ***
 
-From the provided code snippet, we see the `value` parameter is currently the **subtotal price** formatted with the `money_without_currency` [money filter](https://shopify.dev/api/liquid/filters/money-filters).
+From the provided code snippet, we see the `value` parameter is currently the **subtotal price** formatted with the `money_without_currency` [money filter](https://shopify.dev/api/liquid/filters/money-filters):
 
 ```HTML
 <!-- Event snippet for Test conversion page -->  
@@ -62,7 +62,7 @@ As shown below, the addition of `money_without_currency` filter divides the pric
 1.45
 ```
 
-Since the conversion value must be numeric, we use `remove:','` to ensure commas are removed for price values over 1,000. 
+Since the conversion value must be numeric, we use the [Liquid String Filter](https://shopify.dev/api/liquid/filters/string-filters#remove) `remove:','` to ensure commas are removed for price values over 1,000. 
 
 {{% callout note %}}
 On a related note, we provide the currency ISO code separately since we stripped it from the subtotal. While `'currency': {{ currency }}` may work, explicitly using the `checkout.currency` is likely more reliable in the long term: `'currency': '{{ checkout.currency }}',`

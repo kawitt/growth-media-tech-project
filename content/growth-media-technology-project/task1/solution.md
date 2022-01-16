@@ -75,6 +75,7 @@ add that as well?
 </script> 
 ```
 {{< /spoiler >}}
+{{< /spoiler >}}
 
 Next:
 [Jump to Task 2]({{< relref "/growth-media-technology-project/task2/_index.md" >}})

@@ -21,7 +21,7 @@ weight: 4
 
 ***
 
-1. Encapsulate the event snippet with the following Liquid tags: `{% if first_time_accessed %}` and `{% endif %}`.
+1. Encapsulate the event snippet with the following Liquid tags: `{% if first_time_accessed %}` and `{% endif %}`:
 
 ```HTML
 {% if first_time_accessed %}
@@ -43,20 +43,15 @@ weight: 4
 
 ***
 
-1. As we see in the [Shopify Documentation](https://help.shopify.com/en/manual/orders/status-tracking/customize-order-status/first-time-accessed):
+1. Surrounding the conversion event code snippet with `{% if first_time_accessed %}` and `{% endif %}` ensures duplicate conversions won't be submitted on page reloads. From the [Shopify Documentation](https://help.shopify.com/en/manual/orders/status-tracking/customize-order-status/first-time-accessed):
 
-> It is common to include scripts that track sales conversions on the order status page because it is the final page of checkout
+> It is common to include scripts that track sales conversions on the order status page because it is the final page of checkout.
 > However, customers who return to check their order status might count as a second sale in your analytics.
 >
 > To prevent your analytics from counting customers more than once, you can add the first_time_accessed property around some or all of
-> your additional scripts. To do this, use a Liquid if statement, and place any scripts that you only want to run once between {% if 
-> first_time_accessed %} and {% endif %} tags.
+> your additional scripts.
 
-Surrounding the conversion event code snippet as shown ensures duplicate conversions won't be captured on page reloads.
-
-2. According to the [Google Ads Documentation](https://support.google.com/google-ads/answer/6386790?hl=en):
+2. We avoid capturing duplicate conversions by ensuring the `transaction_id` parameter is set to a unique value. Thanks to Subtask 2, we've already accomplished this with `'transaction_id': '{{ order.order_number }}'`. According to the [Google Ads Documentation](https://support.google.com/google-ads/answer/6386790?hl=en):
 
 > If there are 2 conversions for the same conversion action with the same transaction ID, Google Ads will know the second conversion
 > is a duplicate, you will see an error message, and the duplicate conversion won’t be counted.
-
-We avoid capturing duplicate conversions by ensuring the `transaction_id` parameter is set to a unique value. Thanks to Subtask 2, we've already accomplished this with `'transaction_id': '{{ order.order_number }}'`.
