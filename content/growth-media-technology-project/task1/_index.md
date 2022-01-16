@@ -16,7 +16,7 @@ type: book  # Do not modify.
 
 ***
 
-### Primary
+### Prompt
 
 The client has just created a new Google Ads account, and their Ecommerce platform is Shopify. Below is a broken Google Ads Conversion Tracking Tag. The value parameter should be Order Subtotal (which should not include a currency symbol or any commas), and we will also be including a new parameter, **transaction_id** which will be the Order Number. Revenue is only showing up for orders less than $1,000, and orders are being duplicated. Please help!
 
@@ -31,7 +31,7 @@ For reference, here is the original code snippet included with the task with som
 
 {{< spoiler text="Click to view the code" >}}
 ```html
-!-- Global site tag (gtag.js) - Google Ads: 123456789 -->  
+<!-- Global site tag (gtag.js) - Google Ads: 123456789 -->  
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-123456789"></script>  
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -61,29 +61,29 @@ Below is a list of tasks derived from the prompt, the relevant text from the pro
 
 1. Make `value` parameter **Order Subtotal** and remove currency symbol and commas.
 
-[Subtask 1 Solution]({{< relref "/growth-media-technology-project/task1/subtask1.md" >}})
+:point_right: [Subtask 1 Solution]({{< relref "/growth-media-technology-project/task1/subtask1.md" >}})
 
-> The value parameter should be Order Subtotal (which should not include a currency symbol or any commas).
+> we will also be including a new parameter, **transaction_id** which will be the Order Number.
 
 2. Set `transaction_id` parameter to **Order Number**.   
 
-[Subtask 2 Solution]({{< relref "/growth-media-technology-project/task1/subtask2.md" >}})
+:point_right: [Subtask 2 Solution]({{< relref "/growth-media-technology-project/task1/subtask2.md" >}})
 
 > Revenue is only showing up for orders less than $1,000
 
 3. Ensure all revenue amounts are showing.
 
-[Subtask 3 Solution]({{< relref "/growth-media-technology-project/task1/subtask3.md" >}})
+:point_right: [Subtask 3 Solution]({{< relref "/growth-media-technology-project/task1/subtask3.md" >}})
 
 > orders are being duplicated.
 
 4. Prevent collection of duplicate orders. 
 
-[Subtask 4 Solution]({{< relref "/growth-media-technology-project/task1/subtask1.md" >}})
+:point_right: [Subtask 4 Solution]({{< relref "/growth-media-technology-project/task1/subtask4.md" >}})
 
 > **Bonus** Shopify has a piece of code that only allows a script to fire the first time a page is accessed, can you
 add that as well?
 
 5. Add code to ensure script only fires the first time a page is accessed.
 
-[Subtask 5 Solution]({{< relref "/growth-media-technology-project/task1/subtask1.md" >}})
+:point_right: [Subtask 5 Solution]({{< relref "/growth-media-technology-project/task1/subtask5.md" >}})
