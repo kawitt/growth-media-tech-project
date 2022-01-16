@@ -13,6 +13,7 @@ weight: 1
 
 {{< hl >}}The value parameter should be Order Subtotal (which should not include a currency symbol or any commas).{{< /hl >}}
 <br />
+
 1. Make `value` parameter **Order Subtotal** and remove currency symbol and commas.
 
 ### Solution
@@ -28,11 +29,11 @@ To:
       'value': {{ order.subtotal_price | money_without_currency | remove:',' }},    
 ```
 
-### Explaination
+### Explanation
 
 ***
 
-From the provided code snippet, we see the `value` parameter is currently the **subtotal price** formatted with the `money_without_currency` [money filter](https://shopify.dev/api/liquid/filters/money-filters).
+From the provided code snippet, we see the `value` parameter is currently the **subtotal price** formatted with the `money_without_currency` [money filter](https://shopify.dev/api/liquid/filters/money-filters){:target="_blank"}.
 
 ```HTML
 <!-- Event snippet for Test conversion page -->  
@@ -46,10 +47,10 @@ From the provided code snippet, we see the `value` parameter is currently the **
 </script> 
 ```
 
-According to [Shopify documentation](https://shopify.dev/api/liquid/objects/order), the `order` object provides access to the **order subtotal** through the `subtotal_price` attribute which gives us `'value': {{ order.subtotal_price }}`.
+According to [Shopify documentation](https://shopify.dev/api/liquid/objects/order){:target="_blank"}, the `order` object provides access to the **order subtotal** through the `subtotal_price` attribute which gives us `'value': {{ order.subtotal_price }}`.
 
 {{% callout warning %}}
-Various sources reference `checkout.subtotal_price` or just `{{ subtotal_price }}`, often divided by 100. However, Shopify's current [`checkout` object documentation](https://shopify.dev/api/liquid/objects/checkout) does not include the `subtotal_price` attribute. My assumption is at some point `subtotal_price` was moved from `checkout` to `order`. It's not clear which `{{ subtotal_price }}` references or if `checkout.subtotal_price` is still available. The need to divide by 100 suggests checkout.subtotal_price provides the price as a number in cents i.e. $1.45 as 145. 
+Various sources reference `checkout.subtotal_price` or just `{{ subtotal_price }}`, often divided by 100. However, Shopify's current [`checkout` object documentation](https://shopify.dev/api/liquid/objects/checkout){:target="_blank"} does not include the `subtotal_price` attribute. My assumption is at some point `subtotal_price` was moved from `checkout` to `order`. It's not clear which `{{ subtotal_price }}` references or if `checkout.subtotal_price` is still available. The need to divide by 100 suggests checkout.subtotal_price provides the price as a number in cents i.e. $1.45 as 145. 
 {{% /callout %}}
 
 As shown below, the addition of `money_without_currency` filter divides the price by 100, negating the need to do it manually, and returns it without the currency symbol. 
@@ -61,4 +62,8 @@ As shown below, the addition of `money_without_currency` filter divides the pric
 1.45
 ```
 
-Last, since the conversion value must be numeric, we use `remove:','` to ensure commas are removed for price values over 1,000. 
+Since the conversion value must be numeric, we use `remove:','` to ensure commas are removed for price values over 1,000. 
+
+{{% callout note %}}
+On a related note, we provide the currency ISO code separately since we stripped it from the subtotal. While `'currency': {{ currency }}` may work, explicitly using the `checkout.currency` is likely more reliable in the long term: `'currency': '{{ checkout.currency }}',`
+{{% /callout %}}
