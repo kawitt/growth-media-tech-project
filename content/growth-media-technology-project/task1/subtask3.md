@@ -17,11 +17,11 @@ weight: 3
 
 3. Ensure all revenue amounts are showing.
 
-### Solution
+## Solution
 
 ***
 
-Use the [**remove** Liquid filter](https://shopify.dev/api/liquid/filters/string-filters#remove){:target="_blank"} `remove:','` with the `value` parameter to ensure commas are removed for price values over 1,000. 
+Use the [**remove** Liquid filter](https://shopify.dev/api/liquid/filters/string-filters#remove) `remove:','` with the `value` parameter to ensure commas are removed for price values over 1,000. 
 
 Example:
 ```js
@@ -39,12 +39,12 @@ Example:
 
 ```
 
-### Explanation
+## Explanation
 
 ***
 
 Revenue only showing for orders less than $1,000 was likely due to the inclusion of commas in the submitted `value` parameter. Remember Google expects the conversion value to be a number. Luck for us, this issue was resolved in Subtask 1 with the addition of `remove:','` which removes all commas i.e. 1,000.00 becomes 1000  
 
 {{% callout note %}}
-[The Shopify Cheat Sheet](https://www.shopify.com/partners/shopify-cheat-sheet){:target="_blank"} is an excellent resource building Shopify Themes with Liquid including available Tags, Filters, and Objects.
+[The Shopify Cheat Sheet](https://www.shopify.com/partners/shopify-cheat-sheet) is an excellent resource building Shopify Themes with Liquid including available Tags, Filters, and Objects.
 {{% /callout %}}

@@ -92,3 +92,10 @@ add that as well?{{< /hl >}}
 5. Add code to ensure script only fires the first time a page is accessed.
 
 :point_right: [Subtask 5 Solution]({{< relref "/growth-media-technology-project/task1/subtask5.md" >}})
+
+## Final Solution
+
+***
+
+Don't want to wade through the subtasks? 
+[Jump to Task 2]({{< relref "/growth-media-technology-project/task2/_index.md" >}})

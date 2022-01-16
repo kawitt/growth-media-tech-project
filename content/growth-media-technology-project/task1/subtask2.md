@@ -18,7 +18,7 @@ weight: 2
 2. Set `transaction_id` parameter to **Order Number**.   
 
 
-### Solution
+## Solution
 
 ***
 
@@ -31,7 +31,7 @@ To:
       'transaction_id': '{{ order.order_number }}'     
 ```
 
-### Explanation
+## Explanation
 
 ***
 
