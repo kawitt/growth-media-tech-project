@@ -78,7 +78,7 @@ Below is a list of tasks derived from the prompt, the relevant text from the pro
 
 4. Prevent collection of duplicate orders. 
 
-A project]({{< relref "/project/my-page-name" >}})
+[A project]({{< relref "/growth-media-technology-project/task1/subtask1.md" >}})
 
 > **Bonus** Shopify has a piece of code that only allows a script to fire the first time a page is accessed, can you
 add that as well?
