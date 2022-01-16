@@ -57,13 +57,13 @@ For reference, here is the original code snippet included with the task with som
 
 Below is a list of tasks derived from the prompt, the relevant text from the prompt, and links to the solutions:
 
-> The value parameter should be Order Subtotal (which should not include a currency symbol or any commas).
+{{< hl >}}The value parameter should be Order Subtotal (which should not include a currency symbol or any commas).{{< /hl >}}
 
 1. Make `value` parameter **Order Subtotal** and remove currency symbol and commas.
 
 :point_right: [Subtask 1 Solution]({{< relref "/growth-media-technology-project/task1/subtask1.md" >}})
 
-> we will also be including a new parameter, **transaction_id** which will be the Order Number.
+{{< hl >}}we will also be including a new parameter, **transaction_id** which will be the Order Number.{{< /hl >}}
 
 2. Set `transaction_id` parameter to **Order Number**.   
 
