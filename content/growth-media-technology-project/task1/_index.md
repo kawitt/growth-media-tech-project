@@ -12,18 +12,20 @@ date: "2022-01-15T00:00:00Z"
 type: book  # Do not modify.
 ---
 
-# Task
+## Task
 
-## Primary
+***
+
+### Primary
 
 The client has just created a new Google Ads account, and their Ecommerce platform is Shopify. Below is a broken Google Ads Conversion Tracking Tag. The value parameter should be Order Subtotal (which should not include a currency symbol or any commas), and we will also be including a new parameter, **transaction_id** which will be the Order Number. Revenue is only showing up for orders less than $1,000, and orders are being duplicated. Please help!
 
-## Bonus
+### Bonus
 
 Shopify has a piece of code that only allows a script to fire the first time a page is accessed, can you
 add that as well? 
 
-## Code 
+### Code 
 
 For reference, here is the original code snippet included with the task with some additional formatting to make it pretty. :smile:
 
@@ -49,7 +51,9 @@ For reference, here is the original code snippet included with the task with som
 ```
 {{< /spoiler >}}
 
-# Inferred Subtasks
+## Inferred Subtasks
+
+***
 
 Below is a list of tasks derived from the prompt, the relevant text from the prompt, and links to the solutions:
 
@@ -74,7 +78,7 @@ Below is a list of tasks derived from the prompt, the relevant text from the pro
 
 4. Prevent collection of duplicate orders. 
 
-
+A project]({{< relref "/project/my-page-name" >}})
 
 > **Bonus** Shopify has a piece of code that only allows a script to fire the first time a page is accessed, can you
 add that as well?
