@@ -1,5 +1,5 @@
 ---
-title: Google Ads Conversion Tracking
+title: Google Ads Conversion Tracking - Subtask 1
 linktitle: Subtask 1
 type: book
 date: "2022-01-15T00:00:00+01:00"
@@ -7,16 +7,15 @@ date: "2022-01-15T00:00:00+01:00"
 weight: 1
 ---
 
-## Subtask 1
+## Description
 
 ***
 
-{{< hl >}}The value parameter should be Order Subtotal (which should not include a currency symbol or any commas).{{< /hl >}}  
-
-
+{{< hl >}}The value parameter should be Order Subtotal (which should not include a currency symbol or any commas).{{< /hl >}}
+<br />
 1. Make `value` parameter **Order Subtotal** and remove currency symbol and commas.
 
-## Solution
+### Solution
 
 ***
 
@@ -29,7 +28,7 @@ To:
       'value': {{ order.subtotal_price | money_without_currency | remove:',' }},    
 ```
 
-## Explaination
+### Explaination
 
 ***
 
@@ -62,4 +61,4 @@ As shown below, the addition of `money_without_currency` filter divides the pric
 1.45
 ```
 
-Last, since the conversion value must be numerici, we use `remove:','` to ensure commas are removed for price values over 1,000. 
+Last, since the conversion value must be numeric, we use `remove:','` to ensure commas are removed for price values over 1,000. 
