@@ -99,4 +99,5 @@ add that as well?{{< /hl >}}
 Don't want to wade through the subtasks?
 <br />
 
-point_right: [Jump to Solution]({{< relref "/growth-media-technology-project/task1/solution.md" >}})
+:point_right: [Jump to Solution]({{< relref "/growth-media-technology-project/task1/solution.md" >}})
+{{< cta cta_text=":point_right: Jump to Task 1 Solution" cta_link="/growth-media-technology-project/task1/solution.md" >}}

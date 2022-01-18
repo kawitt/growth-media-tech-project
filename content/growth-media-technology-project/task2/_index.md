@@ -85,4 +85,4 @@ Below is a list of tasks derived from the prompt, the relevant text from the pro
 Don't want to wade through the subtasks?
 <br />
 
-point_right: [Jump to Solution]({{< relref "/growth-media-technology-project/task2/solution.md" >}})
+:point_right: [Jump to Solution]({{< relref "/growth-media-technology-project/task2/solution.md" >}})

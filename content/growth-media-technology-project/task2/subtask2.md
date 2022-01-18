@@ -14,14 +14,13 @@ weight: 2
 {{< hl >}}...the formulas in range B14 to N27 aren’t reading properly...{{< /hl >}}
 <br />
 
-2. Correct the formula(s) in the Weekly section in the Executive Overview to ensure proper output.  
+2. Correct the formula(s) in the Weekly section in the **Executive Overview** to ensure proper output.  
 
 ## Solution
 
 ***
 
 Update the date cell referenced in each formula. For example, C14 in **Executive Overview**:  
-<br />
 
 Change:
 ```swift

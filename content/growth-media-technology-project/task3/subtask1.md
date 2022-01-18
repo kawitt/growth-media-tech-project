@@ -37,9 +37,9 @@ Public Function newtitle(title, brand, color, size, gender, ptype)
     ' Pass title to ProperCase() function in order to 
     ' convert title to proper case, then assign to newtitle
     ' ProperCase() likely contains something like StrConv(strText, vbProperCase)
-    newtitle = ProperCase(title) '"Longsleeve Flannel" 
+    newtitle = ProperCase(title) ' "Longsleeve Flannel" 
     
-    ' if a size is specified and not "One Size"
+    ' if size is not null and not "One Size"
     If IsNull(size) = False And size <> "One Size" Then
         ' add ", Size " size to the end of newtitle  
         newtitle = newtitle & ", Size " & size '"Longsleeve Flannel, Size medium" 
