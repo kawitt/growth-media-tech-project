@@ -1,6 +1,6 @@
 ---
 # Title, summary, and page position.
-linktitle: Task 1 
+linktitle: Task 1 Overview
 summary: Solutions to a broken Google Ads Conversion Tracking tag with Shopify.
 weight: 1
 icon: tags
@@ -22,8 +22,7 @@ The client has just created a new Google Ads account, and their Ecommerce platfo
 
 ### Bonus
 
-Shopify has a piece of code that only allows a script to fire the first time a page is accessed, can you
-add that as well? 
+Shopify has a piece of code that only allows a script to fire the first time a page is accessed, can you add that as well? 
 
 ### Code 
 

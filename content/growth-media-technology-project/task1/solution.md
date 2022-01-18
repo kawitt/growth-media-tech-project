@@ -78,4 +78,5 @@ add that as well?
 {{< /spoiler >}}
 
 Next:
+<br />
 [Jump to Task 2]({{< relref "/growth-media-technology-project/task2/_index.md" >}})
