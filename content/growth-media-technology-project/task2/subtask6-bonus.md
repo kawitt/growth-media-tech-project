@@ -47,7 +47,7 @@ For a more robust solution, we can replace all non-digit values with `/`:
 
 ```swift
 # replaces all non-digit [0-9] characters with /
-=REGEXREPLACE(TO_TEXT($B16), "\D+", "/")
+=REGEXREPLACE(TO_TEXT($B14), "\D+", "/")
 # Input
 11-29.2020 or 11x29y2020 or 11*29&2020, etc.
 # Output
@@ -60,16 +60,16 @@ Inserting the code above, the final formula in C14 looks like this:
 =SUMIFS('Raw Data Combined'!D:D,'Raw Data Combined'!$A:$A,">="&REGEXREPLACE(TO_TEXT($B14), "\D+", "/")-6,'Raw Data Combined'!$A:$A,"<="&REGEXREPLACE(TO_TEXT($B14), "\D+", "/"), 'Raw Data Combined'!$I:$I,"<>#N/A")
 ```
 
-At this point, updating each cell of the table can be arduios. The formula for each cell in a given row contains a unique reference to that row's date. i.e. `">="&$B14-6,` and `"<="&$B14`. Manually editing every cell would be too time consuming. Slightly faster would be using Find and Replace one row at a time. 
+At this point, updating each cell of the table can be arduous. The formula for each cell in a given row contains a unique reference to that row's date. i.e. `">="&$B14-6,` and `"<="&$B14`. Manually editing every cell would be too time consuming. Slightly faster would be using **Find and replace** one row at a time. 
 
-We can use Find and replace with a regular expression and capture group to make updating the formulas even faster. From the [Google Sheets Documentation]
+Using **Find and replace** with a regular expression and capture group makes updating the formulas even faster. From the [Google Sheets Documentation](https://support.google.com/docs/answer/62754?p=spreadsheets_find_replace&visit_id=637779862519155742-1183549233&rd=1#zippy=%2Csee-an-example):
 
 > You can replace parts of a regular expression with capture groups. You reference these capture groups in the "Replace" string using
 > the format "$<group number>." Note: Capture groups only work with Google Sheets. 
 
 For each row, the date column is always B and the row number changes. Using a capture group we capture the row number and re-insert it into our replace string.
 
-The regular expression `"&(\$B\d*)` matches `"&$B` followed by any number of digits and stores it as capture group `$1`. 
+The regular expression `"&(\$B\d*)` matches `"&$B` followed by any number of digits and stores `$BXX` as capture group `$1`. 
 
 We can use the regular expression `"&REGEXREPLACE(TO_TEXT($1), "\D+", "/")` as the replacement string, using `$1` as the cell address we captured in the find string. 
 

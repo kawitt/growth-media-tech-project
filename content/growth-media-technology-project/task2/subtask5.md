@@ -26,7 +26,7 @@ Add two rows to the bottom of the table in **Executive Overview**.
 
 ***
 
-The table as is contains 12 rows starting on 8/22/2020 and ending on 11/28/2020. Given the date range provided in **Executive Overview** cells H8 and H9 is 8/2/2020 through 12/1/2020, it doesn't make sense to add rows for dates after 11/28/2020. Instead, we add two rows for the two weeks preceding 8/22/2020 following these steps:
+The original table contains 12 rows starting on 8/22/2020 and ending on 11/28/2020. Given the date range provided in **Executive Overview** cells H8 and H9 (8/2/2020 through 12/1/2020), it doesn't make sense to add rows for dates after 11/28/2020. Instead, we add two rows for the two weeks preceding 8/22/2020 following these steps:
 
 1. Insert two empty rows at the bottom of the table.
 2. Select cells B26 to N26.

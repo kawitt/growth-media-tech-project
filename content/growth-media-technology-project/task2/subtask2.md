@@ -57,9 +57,9 @@ An undesired consequence of {{< hl >}}copying the formulas over [from **Weekly O
 
 Of course, we'll need to do this for all formulas in the table, not just cell C14. Rather than change each cell manually, we can use **Find & Replace** to do it much quicker.
 
-{{< figure src="replace-date-reference-1.png" caption="Use `ctrl+h` to get there faster." numbered="false" >}}
+{{< figure src="task2-2-replace-date-reference-1.png" caption="Use `ctrl+h` to get there faster." numbered="false" >}}
 
 Below we can see the correct date cell references being used in the table formulas. Unfortunately, we're still not seeing any values. It seems there must be another issue.
 
-{{< gdocs src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTM6Dd8meE1-hr55oQqRHSaBsmEya2m-Xst_gqQmh0SVr_Yf_VEh7iN_0MjvxfVA7NJP0nKxWreDXkx/pubhtml?gid=391302551&single=true" >}}
+{{< gdocs src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTPrh4r8q7UkoAbsL9podtCBEfBrXAeHdoj2GH4aAw5CzKwsYAFdTPhTIoC4YOoF3KVJoGzKT7lTDnk/pubhtml?gid=391302551&single=true" >}}
 

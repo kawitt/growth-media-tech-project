@@ -2,7 +2,7 @@
 # Title, summary, and page position.
 linktitle: Task 3 Overview
 summary: Walking through a VBA script that changes titles.
-weight: 2
+weight: 3
 icon: microsoft
 icon_pack: fab
 
@@ -88,9 +88,9 @@ Below is a list of tasks derived from the prompt, the relevant text from the pro
 {{< hl >}}**Bonus**...How could the script be revised to account for nulls in all fields?{{< /hl >}}
 <br />
 
-2. Alter the formulas in the Weekly section table to support dates with periods. 
+2. Revise the script to account for nulls in all fields. 
 
-:point_right: [Subtask 2 Solution]({{< relref "/growth-media-technology-project/task2/subtask2-bonus.md" >}})
+:point_right: [Subtask 2 Solution]({{< relref "/growth-media-technology-project/task3/subtask2-bonus.md" >}})
 
 
 ## Final Solution

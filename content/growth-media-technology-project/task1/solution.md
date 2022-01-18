@@ -12,6 +12,13 @@ weight: 6
 
 ***
 
+Here's what we did to address everything in Task 1:
+
+1. Made `value` parameter `order.subtotal_price | money_without_currency | remove:','` which removed currency symbol and commas.
+2. Set `transaction_id` parameter to `order.order_number`. 
+3. Ensured order subtotals over $999.99 are captured by removing commas in Subtask 1.
+4. Prevented collection of duplicate orders by setting `transaction_id` to the unique value `order.order_number` and encapsolating the conversion script with `{% if first_time_accessed %} {% endif %}` to ensure the script only executes once.
+
 Putting it all together, the final updated code looks like this:
 
 ```html

@@ -20,7 +20,7 @@ weight: 3
 
 ***
 
-Change the values in Column B to proper date format. For example, B14 in **Executive Overview** change `11.28.2020` to `11-28-2020`.
+Change the values in Column B to proper date format. For example, B14 in **Executive Overview** change `11.28.2020` to `11/28/2020`.
 
 ## Explanation
 

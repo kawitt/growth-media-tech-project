@@ -1,35 +1,94 @@
 ---
-title: Reading List
-linktitle: Reading List
+title: VBA Title Changes - Subtask 1
+linktitle: Subtask 1
 type: book
-date: "2019-05-05T00:00:00+01:00"
+date: "2022-01-15T00:00:00+01:00"
 # Prev/next pager order (if `docs_section_pager` enabled in `params.toml`)
-weight: 2
+weight: 1
 ---
 
-A recommended reading list for the course.
+## Description
 
-## Books
+***
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.
+{{< hl >}}Given the rules below, what will be the outcome? Please explain the order of operations, and include a variable-worded output (e.g. <title> with <size> in <color>) {{< /hl >}}
+<br />
 
-Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.
+1. Using the provided sample rules, provide the output and explain the operations line by line. 
 
-Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.
+## Solution
 
-Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.
+***
 
-Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.
+The easiest way to explain the code is with inline comments:
 
+```vb
+' assume the following:
+title = "longsleeve flannel" 
+brand = "tinuiti"
+size = "medium" 
+color = "dark red/black" 
+gender = "male" 
+ptype = "apparel > t-shirts and tops > shirts" 
 
-## Videos
+' a function that generates a new title using values like above as arguments
+Public Function newtitle(title, brand, color, size, gender, ptype) 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.
+    ' Pass title to ProperCase() function in order to 
+    ' convert title to proper case, then assign to newtitle
+    ' ProperCase() likely contains something like StrConv(strText, vbProperCase)
+    newtitle = ProperCase(title) '"Longsleeve Flannel" 
+    
+    ' if a size is specified and not "One Size"
+    If IsNull(size) = False And size <> "One Size" Then
+        ' add ", Size " size to the end of newtitle  
+        newtitle = newtitle & ", Size " & size '"Longsleeve Flannel, Size medium" 
+    End If
 
-Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.
+    ' remove "Light" from color
+    color = Replace(color, "Light", "") '"dark red/black" 
+    ' remove "Dark" from color
+    color = Replace(color, "Dark", "") '" red/black"
+    ' change "/" to " and " in color
+    color = Replace(color, "/", " and ") '" red and black"
 
-Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.
+    ' add " in " to end of newtitle, make color proper case and add to end of newtitle 
+    newtitle = newtitle & " in " & ProperCase(color) ' "Longsleeve Flannel, Size medium in  Red And Black"
 
-Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.
+    ' Use InStr() to check if newtitle contains "flannel" and if ptype contains "shirt"
+    ' if "flannel" is in newtitle and "shirt" is in ptype 
+    If InStr(newtitle, "flannel") > 0 And InStr(ptype, "shirt") > 0 Then  
+        ' Replace "flannel" with "Plaid Flannel" in newtitle
+        newtitle = Replace(newtitle, "Flannel", "Plaid Flannel") ' "Longsleeve Plaid Flannel, Size medium in  Red And Black" 
+    End If  
 
-Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.
+    ' if gender is "male"
+    If gender = "male" Then ' "male"
+        ' add "Men's " to front of newtitle
+        newtitle = "Men’s " & newtitle ' "Men's Longsleeve Plaid Flannel, Size medium in  Red And Black"
+    Else ' if gender is not "male"
+        ' add "Women's " to front of newtitle
+        newtitle = "Women’s " & newtitle ' "Men's Longsleeve Plaid Flannel, Size medium in  Red And Black"
+    End If  
+
+    ' if brand is not "Default"
+    If brand <> "Default" Then ' "tinuiti" 
+        ' add brand followed by a space in front of newtitle
+        newtitle = brand & " " & newtitle ' "Tinuitit Men's Longsleeve Plaid Flannel, Size medium in  Red And Black"  
+    End If   
+    
+    ' use Replace() to change double spaces to single in newtitle
+    ' repeat with the updated newtitle to change new double spaces that may exist to single
+    ' use Trim() to remove whitespace from both ends of newtitle
+    newtitle = Trim(Replace(Replace(newtitle, "  ", " "), "  ", "")) ' "Tinuitit Men's Longsleeve Plaid Flannel, Size medium in Red And Black"  
+
+End Function
+
+' call the newtitle function with our example values
+newtitle = newtitle(title, brand, color, size, gender, ptype)
+
+' output returned new title using either Debug.Print newtitle, MsgBox newtitle, or 
+Console.WriteLine newtitle
+
+"Tinuitit Men's Longsleeve Plaid Flannel, Size medium in Red And Black"
+```

@@ -11,7 +11,7 @@ weight: 5
 
 ***
 
-What was done to address everything in Task 2:
+Here's what was done to address everything in Task 2:
 
 1. Corrected the data cells referenced in each formula in the n **Executive Overview** sheet so that they point to the relevant column in the **Weekly Overview** sheet.
 
