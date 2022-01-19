@@ -27,7 +27,7 @@ They really want to use periods to show the dates, maybe there’s a way to make
 ### File Link
 
 Here is their report (File > Make A Copy): 
-https://docs.google.com/spreadsheets/d/1nAediTxPONsJwQoWwFwjqSadE51r0LT3_Wv_GGCLo7c/ edit 
+[https://docs.google.com/spreadsheets/d/1nAediTxPONsJwQoWwFwjqSadE51r0LT3_Wv_GGCLo7c/edit](https://docs.google.com/spreadsheets/d/1nAediTxPONsJwQoWwFwjqSadE51r0LT3_Wv_GGCLo7c/edit) 
 
 ## Inferred Subtasks
 
@@ -84,7 +84,7 @@ Below is a list of tasks derived from the prompt, the relevant text from the pro
 
 Don't want to wade through the subtasks?
 
-{{< cta cta_text=":point_right: Jump to Task 2 Solution" cta_link="/growth-media-technology-project/task2/solution.md" >}}
+{{< cta cta_text=":point_right: Jump to Task 2 Solution" cta_link="/growth-media-technology-project/task2/solution" >}}
 
-**NEXT**
+**NEXT**  
 [Google Sheet Weekly Report Troubleshooting - Subtask 1]({{< relref "/growth-media-technology-project/task2/subtask1.md" >}})

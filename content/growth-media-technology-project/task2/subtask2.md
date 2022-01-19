@@ -61,4 +61,4 @@ Of course, we'll need to do this for all formulas in the table, not just cell C1
 Below we can see the correct date cell references being used in the table formulas. Unfortunately, we're still not seeing any values. It seems there must be another issue.
 
 {{< gdocs src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTPrh4r8q7UkoAbsL9podtCBEfBrXAeHdoj2GH4aAw5CzKwsYAFdTPhTIoC4YOoF3KVJoGzKT7lTDnk/pubhtml?gid=391302551&single=true" >}}
-
+[Click here to view the full sheet](https://docs.google.com/spreadsheets/d/1-8oJ1FHo88rlJPruYqf0_JNodnbr7LeUrN9p2sPZzDo/edit?usp=sharing)

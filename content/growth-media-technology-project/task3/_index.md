@@ -26,12 +26,14 @@ These functions often break if there is a null field. How could the script be re
 
 ### Sample Rules
 
+```
 Title = longsleeve flannel 
 Brand = tinuiti 
 Size = medium 
 Color = dark red/black 
 Gender = male 
 Product Type = apparel > t-shirts and tops > shirts 
+```
 
 ### Code 
 
@@ -99,7 +101,7 @@ Below is a list of tasks derived from the prompt, the relevant text from the pro
 
 Don't want to wade through the subtasks?
 
-{{< cta cta_text=":point_right: Jump to Task 3 Solution" cta_link="/growth-media-technology-project/task3/solution.md" >}}
+{{< cta cta_text=":point_right: Jump to Task 3 Solution" cta_link="/growth-media-technology-project/task3/solution" >}}
 
-**NEXT**
+**NEXT**  
 [VBA Title Changes - Subtask 1]({{< relref "/growth-media-technology-project/task3/subtask1.md" >}})

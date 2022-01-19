@@ -36,4 +36,4 @@ The original table contains 12 rows starting on 8/22/2020 and ending on 11/28/20
 Here you can see the completed sheet with the two new rows:
 
 {{< gdocs src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS4ov_cwPuvw6sRquHg2QaXR1mIqpvB9QTZQSYiIoFLuUPlN6lrKxI1BsE3t8i45eUJ6A14UVtboa84/pubhtml?gid=391302551&single=true" >}}
-
+[Click here to view the full sheet](https://docs.google.com/spreadsheets/d/1K9p0SnE4wwdlY5NlMFn7ckW3qKDqKml74wpuZ8BIY44/edit?usp=sharing)

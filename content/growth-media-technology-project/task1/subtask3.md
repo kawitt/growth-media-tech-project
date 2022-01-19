@@ -42,7 +42,7 @@ Example:
 
 ***
 
-Revenue only showing for orders less than $1,000 was likely due to the inclusion of commas in the submitted `value` parameter. Remember Google expects the conversion value to be a number. Luck for us, this issue was already resolved in Subtask 1 with the addition of `remove:','` which removes all commas i.e. 1,000.00 becomes 1000  
+Revenue only showing for orders less than $1,000 was likely due to the inclusion of commas in the submitted `value` parameter. Remember Google expects the conversion value to be a number. Luck for us, this issue was already resolved in Subtask 1 with the addition of `remove:','` which removes all commas i.e. 1,000.00 becomes 1000.00.  
 
 {{% callout note %}}
 [The Shopify Cheat Sheet](https://www.shopify.com/partners/shopify-cheat-sheet) is an excellent resource for building Shopify Themes with Liquid including available Tags, Filters, and Objects.

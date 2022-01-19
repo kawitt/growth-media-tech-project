@@ -33,4 +33,4 @@ The simplest resolution is to use **Find & Replace** to replace all `.` with `/`
 Below we can see the correct date format being used in Column B. Like magic, all the table cells populate once proper dates are provided.
 
 {{< gdocs src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSsaVInWzwe7kOtZUxfX0sO7g8SD57gzmUHAVSmg7WGS9Ky7EGIJs5G4Hx4Yk81-mpf08kNcYQcFmYf/pubhtml?gid=391302551&single=true" >}}
-
+[Click here to view the full sheet](https://docs.google.com/spreadsheets/d/1WoxGGczQF5yAPt9DdX63Oyjn8Kwh2zJ9whCXsAGWH-o/edit?usp=sharing)

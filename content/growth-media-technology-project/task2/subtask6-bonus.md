@@ -82,3 +82,4 @@ We can use the `"&REGEXREPLACE(TO_TEXT($1), "\D+", "/")` as the replacement stri
 Here you can see the **Executive Overview** sheet working well even with `.` in dates:
 
 {{< gdocs src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSPCEPP1hgRuK767G4NOxXVYe2SHP1cWTZrgYouH5vbC2jBBxJCdN8qEKTtdHill4Q2CNgNpQmXGAA-/pubhtml?gid=391302551&single=true" >}}
+[Click here to view the full sheet](https://docs.google.com/spreadsheets/d/146xJDdgZ6_8pUaEBLwZ1IhwZF1WiLr1Gpe4485-QRzM/edit?usp=sharing)

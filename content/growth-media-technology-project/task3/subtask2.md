@@ -30,10 +30,12 @@ From the [VBA Documentation](https://docs.microsoft.com/en-us/office/vba/languag
 When a null value is found, we can easily assign a default value or make the error known and halt execution. For instance, using multiple arguments, we can check all variables for null values and alert the user with a message box:
 
 ```vb
-If IsNull(title, brand, color, size, gender, ptype) Then
-    msgBox
+If IsNull(title, brand, color, size, gender, ptype) = True Then
+    MsgBox "At least one of the arguments is null"
+End if
+```
 
-
+Alternatively, we can check each argument individually like this:
 
 ```vb
 ' a function that generates a new title using values like above as arguments
@@ -53,10 +55,10 @@ A more robust implementation uses a function to handle null cases. This simplifi
 
 ```vb
 Public Function HandleNull(Value As Variant) As Variant
-    If IsNull(strArg) Then 
+    If IsNull(Value) Then 
         HandleNull = ""
     Else
-        HandleNull = strArg
+        HandleNull = Value
     End If
 End Function
 
@@ -87,12 +89,9 @@ Nz ( variant [, valueifnull ] )
 ```
 For example:
 ```vb
-color = Nz(color, 0)
-' sets color to 0 if it's null
-color = Nz(color, "blue")
-' sets color to "blue" if null
-color = Nz(color, "Not Specified")
-' sets color to "Not Specified" if null 
+color = Nz(color, 0) ' sets color to 0 if it's null
+color = Nz(color, "blue") ' sets color to "blue" if null
+color = Nz(color, "Not Specified") ' sets color to "Not Specified" if null 
 ```
 We can even modify our `HandleNull()` function to mimic `Nz()` functionality outside of Access. In this case, `ValueIfNull` defaults to "" if not specified:
 ```vb
@@ -101,8 +100,7 @@ Public Function HandleNull( Value As Variant, optional ValueIfNull As Variant = 
     HandleNull = IIf(IsNull(Value), ValueIfNull, Value)
 End Function
 
-color = HandleNull(color, "")
-' sets color to "" if null
+color = HandleNull(color, "") ' sets color to "" if null
 ```
 Here's how our script could look after adding the code above:
 ```vb

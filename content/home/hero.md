@@ -19,7 +19,5 @@ cta_alt:
   label: View Project Overview
 ---
 <br />
-<br />
 This is the next step in the interview process for Tinuiti’s Growth Media Technology position, specifically the Technical Specialist, Growth Media. Follow the links below to find solutions to the three tasks provided by Tinuiti.  
-<br />
 <br />

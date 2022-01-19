@@ -19,13 +19,13 @@ Here's what we did to address everything in Task 3:
 
 2. We added the `HandleNull()` function to assign default values to null variants. We inserted calls at the top of the `newtitle` function to check each argument before attempting to use them.
 
-:point_right: [Subtask 2 Solution]({{< relref "/growth-media-technology-project/task3/subtask2-bonus.md" >}})
+:point_right: [Subtask 2 Solution]({{< relref "/growth-media-technology-project/task3/subtask2.md" >}})
 
 ## Solution
 
 ***
 
-The easiest way to explain the code is with inline comments:
+The final code below includes all our additions plus the requested inline comments:
 
 ```vb
 ' assume the following:

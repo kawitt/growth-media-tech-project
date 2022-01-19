@@ -44,6 +44,7 @@ Putting it all together, the final updated formula looks like this:
 And here we see the final Sheet:
 
 {{< gdocs src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSOar_-xkKkpsRxkMgFZnOUBPN5XBia0Vih2L6jmOJhlp_4y3y8wIcJGU-h1RePHd-hpYeJCeDNFrZb/pubhtml?gid=391302551&single=true" >}}
+[Click here to view the full sheet](https://docs.google.com/spreadsheets/d/1JpKzaYO61cX3qh2WHFq8eel4K4vhNbhgDifzB7NStJc/edit?usp=sharing)  
 
 For reference, included below is the original Task 2 information:
 
