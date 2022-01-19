@@ -36,7 +36,7 @@ The original table contains 12 rows starting on 8/22/2020 and ending on 11/28/20
 {{< gdocs src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRWrRGnoU7BA2TuysnAJMGBqAmhKaOQ7Lo9f2FLx4-3P00xVLx1rPUN5k68tZK295FAhQjzs6ZAfMpx/pubhtml?gid=391302551&single=true" >}}
 [Click here to view the full sheet](https://docs.google.com/spreadsheets/d/14EzeN-8yZDYyZlXtBgIAXJq3gjbTAL4BMejvUZ4jkV0/edit?usp=sharing)
 
-Alternatively, given the date range provided in **Executive Overview** is 8/2/2020 through 12/1/2020 (cells H8 and H9), we see `8/15/2020` and `8/8/2020` are also missing. In this case we add two rows for the two weeks preceding 8/22/2020 following these steps:
+Alternatively, given the date range provided in **Executive Overview** is `8/2/2020` through `12/1/2020` (cells H8 and H9), we see `8/15/2020` and `8/8/2020` are also missing. In this case we add two rows for the two weeks preceding 8/22/2020 following these steps:
 
 1. Insert two empty rows at the bottom of the table.
 2. Select cells B26 to N26.
