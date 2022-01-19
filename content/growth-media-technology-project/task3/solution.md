@@ -27,7 +27,7 @@ Here's what we did to address everything in Task 3:
 
 The final code below includes all our additions plus the requested inline comments:
 
-```vb
+```
 ' assume the following:
 title = "longsleeve flannel" 
 brand = "tinuiti"

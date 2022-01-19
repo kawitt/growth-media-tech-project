@@ -22,7 +22,7 @@ weight: 1
 
 The easiest way to explain the code is with inline comments:
 
-```vb
+```vba
 ' assume the following:
 title = "longsleeve flannel" 
 brand = "tinuiti"

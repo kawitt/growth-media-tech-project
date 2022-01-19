@@ -38,13 +38,7 @@ time_format: '3:04 PM'
 
 highlight: true
 highlight_languages:
-- python
-- xls
-- vb
-- vba
-- js
-- html
-- swift
+  - vba
 math: false
 diagram: false
 privacy_pack: false
