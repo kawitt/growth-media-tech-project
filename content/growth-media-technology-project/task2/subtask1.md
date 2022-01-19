@@ -64,5 +64,6 @@ The **Executive Overview** sheet now looks like this:
 
 {{< gdocs src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTM6Dd8meE1-hr55oQqRHSaBsmEya2m-Xst_gqQmh0SVr_Yf_VEh7iN_0MjvxfVA7NJP0nKxWreDXkx/pubhtml?gid=391302551&single=true" >}}
 [Click here to view the full sheet](https://docs.google.com/spreadsheets/d/1BRiU32HTpmm23hb4bARWFOVV7kkAaAEYdR83s8xGNIU/edit?usp=sharing)
-<br />
+<br />  
+
 Unfortunately, even though the formulas are now referencing the proper raw data, the table values are still not correct. Let's look at the two remaining arguments in Subtask 2.
