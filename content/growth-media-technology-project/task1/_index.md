@@ -100,6 +100,5 @@ Don't want to wade through the subtasks?
 
 {{< cta cta_text=":point_right: Jump to Task 1 Solution" cta_link="/growth-media-technology-project/task1/solution.md" >}}
 
-**NEXT**
-
+**NEXT**  
 [Google Ads Conversion Tracking - Subtask 1]({{< relref "/growth-media-technology-project/task1/subtask1.md" >}})
