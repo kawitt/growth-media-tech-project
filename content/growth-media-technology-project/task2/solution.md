@@ -69,8 +69,5 @@ https://docs.google.com/spreadsheets/d/1nAediTxPONsJwQoWwFwjqSadE51r0LT3_Wv_GGCL
 {{< /spoiler >}}
 
 ***
-
-
-Next:
-<br />
-[Jump to Task 3]({{< relref "/growth-media-technology-project/task3/_index.md" >}})
+**NEXT**  
+[:point_right: Jump to Task 3]({{< relref "/growth-media-technology-project/task3/_index.md" >}})

@@ -119,6 +119,5 @@ Console.WriteLine(newtitleStr)
 ```
 This completes all three tasks. Thanks for following along and have a great day!
 
-Next:
-<br />
-[Jump to Project Overview]({{< relref "/growth-media-technology-project/_index.md" >}})
+**NEXT**  
+[:point_right: Jump to Project Overview]({{< relref "/growth-media-technology-project/_index.md" >}})

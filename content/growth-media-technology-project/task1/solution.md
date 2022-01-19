@@ -97,7 +97,5 @@ add that as well?
 ```
 {{< /spoiler >}}
 {{< /spoiler >}}
-
-Next:
-<br />
-[Jump to Task 2]({{< relref "/growth-media-technology-project/task2/_index.md" >}})
+**NEXT**  
+[:point_right: Jump to Task 2]({{< relref "/growth-media-technology-project/task2/_index.md" >}})
