@@ -4,12 +4,6 @@
 #   The weight parameter defines the order that the links will appear in.
 
 main:
-  - name: Home
-    url: /
-    weight: 10
   - name: Growth Media Technology Project
     url: growth-media-technology-project/
-    weight: 20
-  - name: About Me
-    url: about-kyle-witt/
-    weight: 30
+    weight: 10
