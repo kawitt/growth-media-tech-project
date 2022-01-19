@@ -28,7 +28,7 @@ Visually compare the **Executive Overview** and **Weekly Overview** tables.
 
 For larger tables, it might be necessary to implement something like conditional formatting or vlookups to identify mismatched values. Because these tables are small, it's easy to simply compare them row by row for any discrepancies. 
 
-{{< figure src="../task2-4-verify-data.png" caption="The tables match." numbered="false" >}}
+{{< figure src="../task2-4-verify-data-hl.png" caption="The tables match." numbered="false" >}}
 
 Comparing the two tables we see the date in **Executive Overview** B24 is `9/2/2020` while in the **Weekly Overview** table it's `9/5/2020`. Counting by weeks, the correct date is `9/5/2020`. The values in the remaining rows appear to match.
 
