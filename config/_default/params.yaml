@@ -37,7 +37,13 @@ time_format: '3:04 PM'
 # Site features
 
 highlight: true
-highlight_languages: ["python", "xls", "vb", "js", "html", "swift"]
+highlight_languages:
+  - "python"
+  - "xls"
+  - "vb"
+  - "js"
+  - "html"
+  - "swift"
 math: false
 diagram: false
 privacy_pack: false
