@@ -61,7 +61,7 @@ copyright_license:
   share_alike: true
   allow_commercial: false
   notice: 'This work is licensed under {license}'
-plugins_js: []
+plugins_js: [vba.js]
 breadcrumb:
   page_types:
     book: true
