@@ -25,7 +25,7 @@ Here's what was done to address everything in Task 2:
 
 :point_right: [Subtask 3 Solution]({{< relref "/growth-media-technology-project/task2/subtask3.md" >}})
 
-4. Visually verified the values in the Weekly section in the **Executive Overview** match the **Weekly Overview** sheet.
+4. Visually verified the values in the Weekly section in the **Executive Overview** match the **Weekly Overview** sheet. Correct `9/2/2020` to `9/5/2020` and fix formatting on **Revenue** and **ROAS** columns to match.
 
 :point_right: [Subtask 4 Solution]({{< relref "/growth-media-technology-project/task2/subtask4.md" >}})
 
