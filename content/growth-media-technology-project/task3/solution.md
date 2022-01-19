@@ -13,7 +13,7 @@ weight: 3
 
 Here's what we did to address everything in Task 3:
 
-1. Using the provided sample rules, we determined final output is `Tinuitit Men's Longsleeve Plaid Flannel, Size medium in Red And Black` and explained all operations with inline comments.
+1. Using the provided sample rules, we determined final output is `Tinuiti Men's Longsleeve Plaid Flannel, Size medium in Red And Black` and explained all operations with inline comments.
 
 :point_right: [Subtask 1 Solution]({{< relref "/growth-media-technology-project/task3/subtask1.md" >}})
 
@@ -36,8 +36,11 @@ color = "dark red/black"
 gender = "male" 
 ptype = "apparel > t-shirts and tops > shirts" 
 
+' a function to assign null values a default value
 Public Function HandleNull( Value As Variant, optional ValueIfNull As Variant = "" ) As Variant
+    ' if value is null, set to second arg, otherwise third arg (stays the same)
     HandleNull = IIf(IsNull(Value), ValueIfNull, Value)
+' return HandleNull
 End Function
 
 ' a function that generates a new title using values like above as arguments
@@ -102,7 +105,7 @@ Public Function newtitle(title, brand, color, size, gender, ptype)
     If brand <> "Default" Then ' "tinuiti" 
         ' add brand followed by a space in front of newtitle
         newtitle = brand & " " & newtitle
-        ' "Tinuitit Men's Longsleeve Plaid Flannel, Size medium in  Red And Black"  
+        ' "Tinuiti Men's Longsleeve Plaid Flannel, Size medium in  Red And Black"  
     End If   
     
     ' use Replace() to change double spaces to single in newtitle
@@ -110,8 +113,9 @@ Public Function newtitle(title, brand, color, size, gender, ptype)
     ' that may exist to single
     ' use Trim() to remove whitespace from both ends of newtitle
     newtitle = Trim(Replace(Replace(newtitle, "  ", " "), "  ", ""))
-    ' "Tinuitit Men's Longsleeve Plaid Flannel, Size medium in Red And Black"  
+    ' "Tinuiti Men's Longsleeve Plaid Flannel, Size medium in Red And Black"  
 
+' return newtitle
 End Function
 ' declare variable
 Dim newtitleStr As String
@@ -123,7 +127,7 @@ newtitleStr = newtitle(title, brand, color, size, gender, ptype)
 Console.WriteLine(newtitleStr)
 
 ' Output:
-"Tinuitit Men's Longsleeve Plaid Flannel, Size medium in Red And Black"
+"Tinuiti Men's Longsleeve Plaid Flannel, Size medium in Red And Black"
 ```
 This completes all three tasks. Thanks for following along and have a great day!
 

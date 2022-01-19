@@ -81,7 +81,7 @@ Public Function newtitle(title, brand, color, size, gender, ptype)
     If brand <> "Default" Then ' "tinuiti" 
         ' add brand followed by a space in front of newtitle
         newtitle = brand & " " & newtitle 
-        ' "Tinuitit Men's Longsleeve Plaid Flannel, Size medium in  Red And Black"  
+        ' "Tinuiti Men's Longsleeve Plaid Flannel, Size medium in  Red And Black"  
     End If   
     
     ' use Replace() to change double spaces to single in newtitle
@@ -89,7 +89,7 @@ Public Function newtitle(title, brand, color, size, gender, ptype)
     '  that may exist to single.
     ' use Trim() to remove whitespace from both ends of newtitle
     newtitle = Trim(Replace(Replace(newtitle, "  ", " "), "  ", ""))
-    ' "Tinuitit Men's Longsleeve Plaid Flannel, Size medium in Red And Black"  
+    ' "Tinuiti Men's Longsleeve Plaid Flannel, Size medium in Red And Black"  
 
     ' returns newtitle since variable matches function name.
 End Function
@@ -104,5 +104,5 @@ newtitleStr = newtitle(title, brand, color, size, gender, ptype)
 Console.WriteLine(newtitleStr)
 
 ' Output:
-"Tinuitit Men's Longsleeve Plaid Flannel, Size medium in Red And Black"
+"Tinuiti Men's Longsleeve Plaid Flannel, Size medium in Red And Black"
 ```
