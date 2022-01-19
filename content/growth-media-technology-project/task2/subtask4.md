@@ -14,7 +14,7 @@ weight: 4
 {{< hl >}}...the data needs to match the Weekly sheet...{{< /hl >}}
 <br />
 
-4. Verify the values in the Weekly section in the Executive Overview match the Weekly sheet. 
+4. Verify the values in the Weekly section in the **Executive Overview** match the Weekly sheet. 
 
 ## Solution
 
@@ -26,7 +26,7 @@ Visually compare the **Executive Overview** and **Weekly Overview** tables.
 
 ***
 
-For larger tables, it might be necessary to implement something like conditional formatting or vlookups to identify mismatched values.Because these tables are small, it's easy to simply compare them side-by-side for any discrepancies. 
+For larger tables, it might be necessary to implement something like conditional formatting or vlookups to identify mismatched values. Because these tables are small, it's easy to simply compare them side-by-side for any discrepancies. 
 
-{{< figure src="task2-4-verify-data.png" caption="The tables match." numbered="false" >}}
+{{< figure src="../task2-4-verify-data.png" caption="The tables match." numbered="false" >}}
 

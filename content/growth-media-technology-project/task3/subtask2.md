@@ -11,84 +11,143 @@ weight: 2
 
 ***
 
-{{< hl >}}Given the rules below, what will be the outcome? Please explain the order of operations, and include a variable-worded output (e.g. <title> with <size> in <color>) {{< /hl >}}
+{{< hl >}}**Bonus**...How could the script be revised to account for nulls in all fields?{{< /hl >}}
 <br />
 
-1. Using the provided sample rules, provide the output and explain the operations line by line. 
+2. Revise the script to account for nulls in all fields. 
 
 ## Solution
 
 ***
 
-The easiest way to explain the code is with inline comments:
+There are several ways to handle null values depending on desired actions. We can check each variable for null values using `IsNull(Variant)`. 
+
+From the [VBA Documentation](https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/isnull-function):
+
+> IsNull returns True if expression is Null; otherwise, IsNull returns False. If expression consists of more than one variable, Null
+> in any constituent variable causes True to be returned for the entire expression.
+
+When a null value is found, we can easily assign a default value or make the error known and halt execution. For instance, using multiple arguments, we can check all variables for null values and alert the user with a message box:
 
 ```vb
-' assume the following:
-title = "longsleeve flannel" 
-brand = "tinuiti"
-size = "medium" 
-color = "dark red/black" 
-gender = "male" 
-ptype = "apparel > t-shirts and tops > shirts" 
+If IsNull(title, brand, color, size, gender, ptype) Then
+    msgBox
+
+
+
+```vb
+' a function that generates a new title using values like above as arguments
+Public Function newtitle(title, brand, color, size, gender, ptype) 
+
+    ' set null value to zero length string
+    If IsNull(title) = True Then title = ""
+    If IsNull(brand) = True Then brand = ""
+    If IsNull(size) = True Then size = ""
+    If IsNull(color) = True Then color = "" 
+    If IsNull(gender) = True Then gender = "" 
+    If IsNull(ptype) = True Then ptype = "" 
+
+...
+```
+A more robust implementation uses a function to handle null cases. This simplifies the code in the `newtitle` function, provides for quick modification of the default value used for null values, and makes adding checks for other undesired values easy.
+
+```vb
+Public Function HandleNull(Value As Variant) As Variant
+    If IsNull(strArg) Then 
+        HandleNull = ""
+    Else
+        HandleNull = strArg
+    End If
+End Function
 
 ' a function that generates a new title using values like above as arguments
 Public Function newtitle(title, brand, color, size, gender, ptype) 
 
-    ' Pass title to ProperCase() function in order to 
-    ' convert title to proper case, then assign to newtitle
-    ' ProperCase() likely contains something like StrConv(strText, vbProperCase)
-    newtitle = ProperCase(title) ' "Longsleeve Flannel" 
-    
-    ' if size is not null and not "One Size"
-    If IsNull(size) = False And size <> "One Size" Then
-        ' add ", Size " size to the end of newtitle  
-        newtitle = newtitle & ", Size " & size '"Longsleeve Flannel, Size medium" 
-    End If
+    title = HandleNull(title)
+    brand = HandleNull(brand)
+    size = HandleNull(size)
+    color = HandleNull(color)
+    gender = HandleNull(gender)
+    ptype = HandleNull(ptype)
+...
+```
 
-    ' remove "Light" from color
-    color = Replace(color, "Light", "") '"dark red/black" 
-    ' remove "Dark" from color
-    color = Replace(color, "Dark", "") '" red/black"
-    ' change "/" to " and " in color
-    color = Replace(color, "/", " and ") '" red and black"
+{{% callout note %}}
+The Null value indicates that the Variant contains no valid data. Null is not the same as Empty, which indicates that a variable has not yet been initialized. It is also not the same as a zero-length string (""), which is sometimes referred to as a null string. In other words, if we're also concerned about initialized variables not yet assigned a value or zero-length strings, we'll need to use more than just `IsNull`.
+{{% /callout %}}
 
-    ' add " in " to end of newtitle, make color proper case and add to end of newtitle 
-    newtitle = newtitle & " in " & ProperCase(color) ' "Longsleeve Flannel, Size medium in  Red And Black"
+Microsoft Access effectively has the above `HandleNull` built in as [`Nz()` (NullToZero)](https://support.microsoft.com/en-us/office/nz-function-8ef85549-cc9c-438b-860a-7fd9f4c69b6c):
 
-    ' Use InStr() to check if newtitle contains "flannel" and if ptype contains "shirt"
-    ' if "flannel" is in newtitle and "shirt" is in ptype 
-    If InStr(newtitle, "flannel") > 0 And InStr(ptype, "shirt") > 0 Then  
-        ' Replace "flannel" with "Plaid Flannel" in newtitle
-        newtitle = Replace(newtitle, "Flannel", "Plaid Flannel") ' "Longsleeve Plaid Flannel, Size medium in  Red And Black" 
-    End If  
+> You can use the Nz function to return zero, a zero-length string (" "), or another specified value when a Variant is Null. For
+> example, you can use this function to convert a Null value to another value and prevent it from propagating through an expression.
 
-    ' if gender is "male"
-    If gender = "male" Then ' "male"
-        ' add "Men's " to front of newtitle
-        newtitle = "Men’s " & newtitle ' "Men's Longsleeve Plaid Flannel, Size medium in  Red And Black"
-    Else ' if gender is not "male"
-        ' add "Women's " to front of newtitle
-        newtitle = "Women’s " & newtitle ' "Men's Longsleeve Plaid Flannel, Size medium in  Red And Black"
-    End If  
-
-    ' if brand is not "Default"
-    If brand <> "Default" Then ' "tinuiti" 
-        ' add brand followed by a space in front of newtitle
-        newtitle = brand & " " & newtitle ' "Tinuitit Men's Longsleeve Plaid Flannel, Size medium in  Red And Black"  
-    End If   
-    
-    ' use Replace() to change double spaces to single in newtitle
-    ' repeat with the updated newtitle to change new double spaces that may exist to single
-    ' use Trim() to remove whitespace from both ends of newtitle
-    newtitle = Trim(Replace(Replace(newtitle, "  ", " "), "  ", "")) ' "Tinuitit Men's Longsleeve Plaid Flannel, Size medium in Red And Black"  
-
+Syntax
+```vb
+Nz ( variant [, valueifnull ] )
+```
+For example:
+```vb
+color = Nz(color, 0)
+' sets color to 0 if it's null
+color = Nz(color, "blue")
+' sets color to "blue" if null
+color = Nz(color, "Not Specified")
+' sets color to "Not Specified" if null 
+```
+We can even modify our `HandleNull()` function to mimic `Nz()` functionality outside of Access. In this case, `ValueIfNull` defaults to "" if not specified:
+```vb
+Public Function HandleNull( Value As Variant, optional ValueIfNull As Variant = "") As Variant
+    ' using if then else shorthand
+    HandleNull = IIf(IsNull(Value), ValueIfNull, Value)
 End Function
 
-' call the newtitle function with our example values
-newtitle = newtitle(title, brand, color, size, gender, ptype)
+color = HandleNull(color, "")
+' sets color to "" if null
+```
+Here's how our script could look after adding the code above:
+```vb
+Public Function HandleNull( Value As Variant, optional ValueIfNull As Variant = "" ) As Variant
+    HandleNull = IIf(IsNull(Value), ValueIfNull, Value)
+End Function
 
-' output returned new title using either Debug.Print newtitle, MsgBox newtitle, or 
-Console.WriteLine newtitle
+Public Function newtitle(title, brand, color, size, gender, ptype)  
 
-"Tinuitit Men's Longsleeve Plaid Flannel, Size medium in Red And Black"
+    Dim ValueIfNull
+    ValueIfNull = ""
+
+    title = HandleNull(title, ValueIfNull)
+    brand = HandleNull(brand, "Tinuiti")
+    size = HandleNull(size, "Unknown Size")
+    color = HandleNull(color)
+    gender = HandleNull(gender, ValueIfNull)
+    ptype = HandleNull(ptype, ValueIfNull)
+
+    newtitle = ProperCase(title)  
+
+    If IsNull(size) = False And size <> "One Size" Then  
+        newtitle = newtitle & ", Size " & size  
+    End If
+
+    color = Replace(color, "Light", "")  
+    color = Replace(color, "Dark", "")  
+    color = Replace(color, "/", " and ")  
+    newtitle = newtitle & " in " & ProperCase(color)  
+  
+    If InStr(newtitle, "flannel") > 0 And InStr(ptype, "shirt") > 0 Then  
+        newtitle = Replace(newtitle, "Flannel", "Plaid Flannel")  
+    End If  
+  
+    If gender = "male" Then  
+        newtitle = "Men’s " & newtitle  
+    Else 
+        newtitle = "Women’s " & newtitle  
+    End If  
+  
+    If brand <> "Default" Then  
+        newtitle = brand & " " & newtitle  
+    End If   
+    
+    newtitle = Trim(Replace(Replace(newtitle, "  ", " "), "  ", ""))   
+
+End Function 
 ```

@@ -18,7 +18,7 @@ type: book  # Do not modify.
 
 ### Prompt
 
-The account manager is ready to update their titles. We have several variables, including Title, Brand, Color, Size, Gender, and Product Type. Given the rules below, what will be the outcome? Please explain the order of operations, and include a variable-worded output (e.g. <title> with <size> in <color>)
+The account manager is ready to update their titles. We have several variables, including Title, Brand, Color, Size, Gender, and Product Type. Given the rules below, what will be the outcome? Please explain the order of operations, and include a variable-worded output (e.g. `<title> with <size> in <color>`)
 
 ### Bonus
 
@@ -78,7 +78,7 @@ End Function
 
 Below is a list of tasks derived from the prompt, the relevant text from the prompt, and links to the solutions:
 
-{{< hl >}}Given the rules below, what will be the outcome? Please explain the order of operations, and include a variable-worded output (e.g. <title> with <size> in <color>) {{< /hl >}}
+{{< hl >}}Given the rules below, what will be the outcome? Please explain the order of operations, and include a variable-worded output (e.g. `<title> with <size> in <color>`) {{< /hl >}}
 <br />
 
 1. Using the provided sample rules, provide the output and explain the operations line by line. 

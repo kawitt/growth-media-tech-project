@@ -13,19 +13,35 @@ weight: 7
 
 Here's what was done to address everything in Task 2:
 
-1. Corrected the data cells referenced in each formula in the n **Executive Overview** sheet so that they point to the relevant column in the **Weekly Overview** sheet.
+1. Corrected the data cells referenced in each formula in the **Executive Overview** sheet so that they point to the relevant column in the **Weekly Overview** sheet.
 
-2. Updated the date cell referenced in each formula to match the date column in **Executive Overview** table.
+:point_right: [Subtask 1 Solution]({{< relref "/growth-media-technology-project/task2/subtask1.md" >}})
+
+2. Changed the date cell referenced in each formula to from A to match the date column B in **Executive Overview** table.
+
+:point_right: [Subtask 2 Solution]({{< relref "/growth-media-technology-project/task2/subtask2.md" >}})
 
 3. Updated the dates in Column B so that they are properly formatted with either `-` or `/`.
 
+:point_right: [Subtask 3 Solution]({{< relref "/growth-media-technology-project/task2/subtask3.md" >}})
+
 4. Visually verified the values in the Weekly section in the **Executive Overview** match the **Weekly Overview** sheet.
 
-5. Extended the Weekly section table in the Executive Overview to 15 weeks using the fill handle.
- 
-6. Bonus. Allow dates to include `.` by inserting `SUBSTITUTE` or `REGEXREPLACE` in the `SUMIFS()` formula to replace `.` in dates with `/` during execution. 
+:point_right: [Subtask 4 Solution]({{< relref "/growth-media-technology-project/task2/subtask4.md" >}})
 
-Putting it all together, the final updated Sheet looks like this:
+5. Extended the Weekly section table in the Executive Overview to 15 weeks using the fill handle.
+
+:point_right: [Subtask 5 Solution]({{< relref "/growth-media-technology-project/task2/subtask5.md" >}})
+
+6. Bonus. Allowed dates to include `.` by inserting `SUBSTITUTE` or `REGEXREPLACE` in the `SUMIFS()` formula to replace `.` in dates with `/` during execution. 
+
+:point_right: [Subtask 6 Solution]({{< relref "/growth-media-technology-project/task2/subtask6-bonus.md" >}})
+
+Putting it all together, the final updated formula looks like this:
+```swift
+=SUMIFS('Raw Data Combined'!D:D,'Raw Data Combined'!$A:$A,">="&REGEXREPLACE(TO_TEXT($B14), "\D+", "/")-6,'Raw Data Combined'!$A:$A,"<="&REGEXREPLACE(TO_TEXT($B14), "\D+", "/"), 'Raw Data Combined'!$I:$I,"<>#N/A")
+```
+And here we see the final Sheet:
 
 {{< gdocs src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSOar_-xkKkpsRxkMgFZnOUBPN5XBia0Vih2L6jmOJhlp_4y3y8wIcJGU-h1RePHd-hpYeJCeDNFrZb/pubhtml?gid=391302551&single=true" >}}
 

@@ -52,11 +52,11 @@ In plain terms, `criterion1= ">="&$A14-6` tells the formula to ignore rows with 
 An undesired consequence of {{< hl >}}copying the formulas over [from **Weekly Overview**] and dragging them across{{< /hl >}}, all the formulas incorrectly reference date values from cells in column A. Unlike in **Weekly Overview**, the dates in **Executive Overview** are in column B, not A. As in the example above, to correct the reference we simply change `A` to `B` everywhere the formulas reference the date.
 <br />
 
-{{< figure src="task2-2-dates-column-b.png" caption="Dates column is B not A" numbered="false" >}}
+{{< figure src="../task2-2-dates-column-b.png" caption="Dates column is B not A" numbered="false" >}}
 
 Of course, we'll need to do this for all formulas in the table, not just cell C14. Rather than change each cell manually, we can use **Find & Replace** to do it much quicker.
 
-{{< figure src="task2-2-replace-date-reference-1.png" caption="Use `ctrl+h` to get there faster." numbered="false" >}}
+{{< figure src="../task2-2-replace-date-reference-1.png" caption="Use `ctrl+h` to get there faster." numbered="false" >}}
 
 Below we can see the correct date cell references being used in the table formulas. Unfortunately, we're still not seeing any values. It seems there must be another issue.
 

@@ -26,7 +26,7 @@ Change the values in Column B to proper date format. For example, B14 in **Execu
 
 ***
 
-According to [Google Sheets Documentation](), valid date formats include `-` or `/`. Dates using `.` aren't interpreted by Sheets as a date, but rather text. Attempting to pass text to our `SUMIFS()` formula when the expected value is a valid date causes the function to fail. 
+According to [Google Sheets Documentation](https://support.google.com/docs/answer/3093039?hl=en), valid date formats include `-` or `/`. Dates using `.` aren't interpreted by Sheets as a date, but rather text. Attempting to pass improperly formatted dates to our `SUMIFS()` formula causes the function to fail. 
 
 The simplest resolution is to use **Find & Replace** to replace all `.` with `/` or `-` in the values found in B14-26.
 

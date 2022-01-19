@@ -15,9 +15,24 @@ weight: 6
 Here's what we did to address everything in Task 1:
 
 1. Made `value` parameter `order.subtotal_price | money_without_currency | remove:','` which removed currency symbol and commas.
+
+:point_right: [Subtask 1 Solution]({{< relref "/growth-media-technology-project/task1/subtask1.md" >}})
+
 2. Set `transaction_id` parameter to `order.order_number`. 
+
+:point_right: [Subtask 2 Solution]({{< relref "/growth-media-technology-project/task1/subtask2.md" >}})
+
 3. Ensured order subtotals over $999.99 are captured by removing commas in Subtask 1.
-4. Prevented collection of duplicate orders by setting `transaction_id` to the unique value `order.order_number` and encapsulating the conversion script with `{% if first_time_accessed %} {% endif %}` to ensure the script only executes once.
+
+:point_right: [Subtask 3 Solution]({{< relref "/growth-media-technology-project/task1/subtask3.md" >}})
+
+4. Prevented collection of duplicate orders by setting `transaction_id` to the unique value `order.order_number`.
+
+:point_right: [Subtask 4 Solution]({{< relref "/growth-media-technology-project/task1/subtask4.md" >}})
+
+5.  Encapsulating the conversion script with `{% if first_time_accessed %} {% endif %}` to ensure the script only executes once.
+
+:point_right: [Subtask 5 Solution]({{< relref "/growth-media-technology-project/task1/subtask5-bonus.md" >}})
 
 Putting it all together, the final updated code looks like this:
 
@@ -42,7 +57,6 @@ Putting it all together, the final updated code looks like this:
     </script> 
 {% endif %}
 ```
-
 For reference, included below is the original Task 1 information:
 
 {{< spoiler text="Click to expand" >}}

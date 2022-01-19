@@ -33,9 +33,9 @@ To:
 
 ***
 
-As mentioned in Subtask 3, valid date formats include `-` or `/`. Dates using `.` aren't interpreted by Sheets as a date, but rather text. Attempting to pass text to our `SUMIFS()` formula when the expected value is a valid date causes the function to fail. 
+As mentioned in Subtask 3, valid date formats include `-` or `/`. Dates using `.` aren't interpreted by Sheets as a valid date. Attempting to pass malformed dates to our `SUMIFS()` formula causes the function to fail. 
 
-To ensure the dates used in the formula are valid, apply the [`SUBSTITUTE`](https://support.google.com/docs/answer/3094215?hl=en) function to replace `.` with `/`.
+To ensure the dates used in the formula are valid, we can insert into `SUMIFS()` a [`SUBSTITUTE`](https://support.google.com/docs/answer/3094215?hl=en) function to replace `.` with `/` before the formula uses the value as a date.
 
 Alternatively, we can accomplish the same thing using the[`REGEXREPLACE`](https://support.google.com/docs/answer/3098245) function:
 
@@ -67,15 +67,14 @@ Using **Find and replace** with a regular expression and capture group makes upd
 > You can replace parts of a regular expression with capture groups. You reference these capture groups in the "Replace" string using
 > the format "$<group number>." Note: Capture groups only work with Google Sheets. 
 
-For each row, the date column is always B and the row number changes. Using a capture group we capture the row number and re-insert it into our replace string.
+For each row, the date column is always B and the row number changes. Using a capture group we can extract the row number and re-insert it into our replace string.
 
 The regular expression `"&(\$B\d*)` matches `"&$B` followed by any number of digits and stores `$BXX` as capture group `$1`. 
 
-We can use the regular expression `"&REGEXREPLACE(TO_TEXT($1), "\D+", "/")` as the replacement string, using `$1` as the cell address we captured in the find string. 
+We can use the `"&REGEXREPLACE(TO_TEXT($1), "\D+", "/")` as the replacement string, using `$1` as the cell address we captured in the find string. 
 
-{{< figure src="task2-6-find-and-replace-regex.png" caption="" numbered="false" >}}
+{{< figure src="../task2-6-find-and-replace-regex.png" caption="**Find and replace** in action." numbered="false" >}}
 
-```
 {{% callout note %}}
 [regex101.com](https://regex101.com) is a great resource for all things regex including testing expressions.
 {{% /callout %}}

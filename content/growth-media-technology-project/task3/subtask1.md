@@ -11,7 +11,7 @@ weight: 1
 
 ***
 
-{{< hl >}}Given the rules below, what will be the outcome? Please explain the order of operations, and include a variable-worded output (e.g. <title> with <size> in <color>) {{< /hl >}}
+{{< hl >}}Given the rules below, what will be the outcome? Please explain the order of operations, and include a variable-worded output (e.g. `<title> with <size> in <color>`) {{< /hl >}}
 <br />
 
 1. Using the provided sample rules, provide the output and explain the operations line by line. 
@@ -82,13 +82,18 @@ Public Function newtitle(title, brand, color, size, gender, ptype)
     ' use Trim() to remove whitespace from both ends of newtitle
     newtitle = Trim(Replace(Replace(newtitle, "  ", " "), "  ", "")) ' "Tinuitit Men's Longsleeve Plaid Flannel, Size medium in Red And Black"  
 
+    ' returns newtitle since variable matches function name.
 End Function
 
+' declare variable
+Dim newtitleStr As String
+
 ' call the newtitle function with our example values
-newtitle = newtitle(title, brand, color, size, gender, ptype)
+newtitleStr = newtitle(title, brand, color, size, gender, ptype)
 
 ' output returned new title using either Debug.Print newtitle, MsgBox newtitle, or 
-Console.WriteLine newtitle
+Console.WriteLine(newtitleStr)
 
+' Output:
 "Tinuitit Men's Longsleeve Plaid Flannel, Size medium in Red And Black"
 ```

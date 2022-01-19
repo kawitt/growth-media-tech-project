@@ -4,17 +4,22 @@ linktitle: Final Solution
 type: book
 date: "2022-01-15T00:00:00+01:00"
 # Prev/next pager order (if `docs_section_pager` enabled in `params.toml`)
-weight: 1
+weight: 3
 ---
 
-## Description
+## Summary
 
 ***
 
-{{< hl >}}Given the rules below, what will be the outcome? Please explain the order of operations, and include a variable-worded output (e.g. <title> with <size> in <color>) {{< /hl >}}
-<br />
+Here's what we did to address everything in Task 3:
 
-1. Using the provided sample rules, provide the output and explain the operations line by line. 
+1. Using the provided sample rules, we determined final output is `Tinuitit Men's Longsleeve Plaid Flannel, Size medium in Red And Black' and explained all operations with inline comments.
+
+:point_right: [Subtask 1 Solution]({{< relref "/growth-media-technology-project/task3/subtask1.md" >}})
+
+2. We added the `HandleNull()` function to assign default values to null variants. We inserted calls at the top of the `newtitle` function to check each argument before attempting to use them.
+
+:point_right: [Subtask 2 Solution]({{< relref "/growth-media-technology-project/task3/subtask2-bonus.md" >}})
 
 ## Solution
 
@@ -31,12 +36,29 @@ color = "dark red/black"
 gender = "male" 
 ptype = "apparel > t-shirts and tops > shirts" 
 
+Public Function HandleNull( Value As Variant, optional ValueIfNull As Variant = "" ) As Variant
+    HandleNull = IIf(IsNull(Value), ValueIfNull, Value)
+End Function
+
 ' a function that generates a new title using values like above as arguments
 Public Function newtitle(title, brand, color, size, gender, ptype) 
 
+    ' declare default value if null
+    Dim ValueIfNull
+    ' make the default value ""
+    ValueIfNull = ""
+
+    ' check each argument for null value, assign value of second argument if null
+    title = HandleNull(title, ValueIfNull)
+    brand = HandleNull(brand, "Tinuiti")
+    size = HandleNull(size, "Unknown Size")
+    color = HandleNull(color)
+    gender = HandleNull(gender, ValueIfNull)
+    ptype = HandleNull(ptype, ValueIfNull)
+
     ' Pass title to ProperCase() function in order to 
     ' convert title to proper case, then assign to newtitle
-    ' ProperCase() likely contains something like StrConv(strText, vbProperCase)
+    ' ProperCase() likely contains something like ProperCase = StrConv(strText, vbProperCase)
     newtitle = ProperCase(title) ' "Longsleeve Flannel" 
     
     ' if size is not null and not "One Size"
@@ -83,12 +105,20 @@ Public Function newtitle(title, brand, color, size, gender, ptype)
     newtitle = Trim(Replace(Replace(newtitle, "  ", " "), "  ", "")) ' "Tinuitit Men's Longsleeve Plaid Flannel, Size medium in Red And Black"  
 
 End Function
+' declare variable
+Dim newtitleStr As String
 
 ' call the newtitle function with our example values
-newtitle = newtitle(title, brand, color, size, gender, ptype)
+newtitleStr = newtitle(title, brand, color, size, gender, ptype)
 
 ' output returned new title using either Debug.Print newtitle, MsgBox newtitle, or 
-Console.WriteLine newtitle
+Console.WriteLine(newtitleStr)
 
+' Output:
 "Tinuitit Men's Longsleeve Plaid Flannel, Size medium in Red And Black"
 ```
+This completes all three tasks. Thanks for following along and have a great day!
+
+Next:
+<br />
+[Jump to Project Overview]({{< relref "/growth-media-technology-project/_index.md" >}})
