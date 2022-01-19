@@ -44,10 +44,13 @@ Light and dark themes can be toggled by clicking the moon icon in the top right 
 Each task is divided into subtasks with, admittedly, exhaustive explanations. If you really want to save time, use the left menu to jump straight to the `Final Solution` for each task. Then drill down into the subtasks for detailed explanations if needed.
 {{% /callout %}}
 
+## Get Started
+
+***
+
 Follow a link below to get started:
 
 {{< cta cta_text="👉 Get Started with Task 1" cta_link="task1" >}}
 
 :point_right: [Jump to Task 2]({{< relref "/growth-media-technology-project/task2/_index.md" >}})  
-
 :point_right: [Jump to Task 3]({{< relref "/growth-media-technology-project/task3/_index.md" >}})
