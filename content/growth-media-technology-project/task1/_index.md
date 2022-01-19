@@ -50,6 +50,14 @@ For reference, here is the original code snippets included with the task with so
 ```
 {{< /spoiler >}}
 
+## Final Solution
+
+***
+
+Don't want to wade through the subtasks?
+
+{{< cta cta_text=":point_right: Jump to Task 1 Solution" cta_link="/growth-media-technology-project/task1/solution" >}}
+
 ## Inferred Subtasks
 
 ***
@@ -91,14 +99,6 @@ add that as well?{{< /hl >}}
 5. Add code to ensure script only fires the first time a page is accessed.
 
 :point_right: [Subtask 5 Solution]({{< relref "/growth-media-technology-project/task1/subtask5-bonus.md" >}})
-
-## Final Solution
-
-***
-
-Don't want to wade through the subtasks?
-
-{{< cta cta_text=":point_right: Jump to Task 1 Solution" cta_link="/growth-media-technology-project/task1/solution" >}}
 
 **NEXT**  
 [Google Ads Conversion Tracking - Subtask 1]({{< relref "/growth-media-technology-project/task1/subtask1.md" >}})

@@ -13,11 +13,11 @@ weight: 7
 
 Here's what was done to address everything in Task 2:
 
-1. Corrected the data cells referenced in each formula in the **Executive Overview** sheet so that they point to the relevant column in the **Weekly Overview** sheet.
+1. Corrected the data cells referenced in each formula in the **Executive Overview** sheet so that they point to the relevant column in the **Raw Data Combined** sheet.
 
 :point_right: [Subtask 1 Solution]({{< relref "/growth-media-technology-project/task2/subtask1.md" >}})
 
-2. Changed the date cell referenced in each formula to from A to match the date column B in **Executive Overview** table.
+2. Changed the date cell referenced in each formula (from A to B) in the **Executive Overview** table to match the date column B. 
 
 :point_right: [Subtask 2 Solution]({{< relref "/growth-media-technology-project/task2/subtask2.md" >}})
 

@@ -29,6 +29,15 @@ They really want to use periods to show the dates, maybe there’s a way to make
 Here is their report (File > Make A Copy): 
 [https://docs.google.com/spreadsheets/d/1nAediTxPONsJwQoWwFwjqSadE51r0LT3_Wv_GGCLo7c/edit](https://docs.google.com/spreadsheets/d/1nAediTxPONsJwQoWwFwjqSadE51r0LT3_Wv_GGCLo7c/edit) 
 
+## Final Solution
+
+***
+
+Don't want to wade through the subtasks?
+
+{{< cta cta_text=":point_right: Jump to Task 2 Solution" cta_link="/growth-media-technology-project/task2/solution" >}}
+
+
 ## Inferred Subtasks
 
 ***
@@ -76,15 +85,6 @@ Below is a list of tasks derived from the prompt, the relevant text from the pro
 6. Alter the formulas in the Weekly section table to support dates with periods. 
 
 :point_right: [Subtask 6 Solution]({{< relref "/growth-media-technology-project/task2/subtask6-bonus.md" >}})
-
-
-## Final Solution
-
-***
-
-Don't want to wade through the subtasks?
-
-{{< cta cta_text=":point_right: Jump to Task 2 Solution" cta_link="/growth-media-technology-project/task2/solution" >}}
 
 **NEXT**  
 [Google Sheet Weekly Report Troubleshooting - Subtask 1]({{< relref "/growth-media-technology-project/task2/subtask1.md" >}})

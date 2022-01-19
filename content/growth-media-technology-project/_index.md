@@ -13,7 +13,7 @@ will find information about me, this site, and solutions to the three tasks prov
 
 My name is Kyle Witt. I'm interested in pretty much all things tech. My personal, professional, and academic activities have provided knowledge and experience in a wide range of areas including programming, hardware, linux, enterprise IT, webhosting, and server management to name a few. I consider myself a general technologist. 
 
-If your interested in knowing more {{% staticref "uploads/Kyle-Witt-Resume-Final-v8.pdf" "newtab" %}}download my resume{{% /staticref %}} and/or check me out on LinkedIn at [https://www.linkedin.com/in/kyle-witt/](https://www.linkedin.com/in/kyle-witt/)
+If you're interested in knowing more {{% staticref "uploads/Kyle-Witt-Resume-Final-v8.pdf" "newtab" %}}download my resume{{% /staticref %}} and/or check me out on LinkedIn at [https://www.linkedin.com/in/kyle-witt/](https://www.linkedin.com/in/kyle-witt/)
 
 Feel free to email any questions/comments to <a href="mailto:kawitt@gmail.com">kawitt@gmail.com</a>.
 

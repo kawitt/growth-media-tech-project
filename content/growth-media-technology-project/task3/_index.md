@@ -74,6 +74,14 @@ End Function
 ```
 {{< /spoiler >}}
 
+## Final Solution
+
+***
+
+Don't want to wade through the subtasks?
+
+{{< cta cta_text=":point_right: Jump to Task 3 Solution" cta_link="/growth-media-technology-project/task3/solution" >}}
+
 ## Inferred Subtasks
 
 ***
@@ -93,15 +101,6 @@ Below is a list of tasks derived from the prompt, the relevant text from the pro
 2. Revise the script to account for nulls in all fields. 
 
 :point_right: [Subtask 2 Solution]({{< relref "/growth-media-technology-project/task3/subtask2-bonus.md" >}})
-
-
-## Final Solution
-
-***
-
-Don't want to wade through the subtasks?
-
-{{< cta cta_text=":point_right: Jump to Task 3 Solution" cta_link="/growth-media-technology-project/task3/solution" >}}
 
 **NEXT**  
 [VBA Title Changes - Subtask 1]({{< relref "/growth-media-technology-project/task3/subtask1.md" >}})
