@@ -13,7 +13,7 @@ weight: 3
 
 Here's what we did to address everything in Task 3:
 
-1. Using the provided sample rules, we determined final output is `Tinuitit Men's Longsleeve Plaid Flannel, Size medium in Red And Black' and explained all operations with inline comments.
+1. Using the provided sample rules, we determined final output is `Tinuitit Men's Longsleeve Plaid Flannel, Size medium in Red And Black` and explained all operations with inline comments.
 
 :point_right: [Subtask 1 Solution]({{< relref "/growth-media-technology-project/task3/subtask1.md" >}})
 
