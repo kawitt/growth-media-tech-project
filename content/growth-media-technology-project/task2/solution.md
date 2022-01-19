@@ -29,7 +29,7 @@ Here's what was done to address everything in Task 2:
 
 :point_right: [Subtask 4 Solution]({{< relref "/growth-media-technology-project/task2/subtask4.md" >}})
 
-5. Extended the Weekly section table in the Executive Overview to 15 weeks using the fill handle.
+5. Add the two missing rows for `10/31/2020` and `9/12/2020` to the **Executive Overview**. Alternatively, add two rows to the bottom of the table.
 
 :point_right: [Subtask 5 Solution]({{< relref "/growth-media-technology-project/task2/subtask5.md" >}})
 
