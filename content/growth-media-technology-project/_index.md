@@ -30,6 +30,8 @@ You can download the original document here:
 
 All pages include navigation links at the bottom. Feel free to use the menu links on the left side if you get lost or want to jump around. 
 
+Light and dark themes can be toggled by clicking the moon icon in the top right corner of the page.
+
 {{% callout note %}}
 Each task is divided into subtasks with, admittedly, exhaustive explanations. If you really want to save time, use the left menu to jump straight to the `Final Solution` for each task. Then drill down into the subtasks for detailed explanations if needed.
 {{% /callout %}}
