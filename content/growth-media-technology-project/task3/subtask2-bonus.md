@@ -29,7 +29,7 @@ From the [VBA Documentation](https://docs.microsoft.com/en-us/office/vba/languag
 
 When a null value is found, we can easily assign a default value or make the error known and halt execution. For instance, using multiple arguments, we can check all variables for null values and alert the user with a message box:
 
-```vb
+```vba
 If IsNull(title, brand, color, size, gender, ptype) = True Then
     MsgBox "At least one of the arguments is null"
 End if
@@ -37,7 +37,7 @@ End if
 
 Alternatively, we can check each argument individually like this:
 
-```vb
+```vba
 ' a function that generates a new title using values like above as arguments
 Public Function newtitle(title, brand, color, size, gender, ptype) 
 
@@ -53,7 +53,7 @@ Public Function newtitle(title, brand, color, size, gender, ptype)
 ```
 A more robust implementation uses a function to handle null cases. This simplifies the code in the `newtitle` function, provides for quick modification of the default value used for null values, and makes adding checks for other undesired values easy.
 
-```vb
+```vba
 Public Function HandleNull(Value As Variant) As Variant
     If IsNull(Value) Then 
         HandleNull = ""
@@ -84,17 +84,17 @@ Microsoft Access effectively has the above `HandleNull` built in as [`Nz()` (Nul
 > example, you can use this function to convert a Null value to another value and prevent it from propagating through an expression.
 
 Syntax
-```vb
+```vba
 Nz ( variant [, valueifnull ] )
 ```
 For example:
-```vb
+```vba
 color = Nz(color, 0) ' sets color to 0 if it's null
 color = Nz(color, "blue") ' sets color to "blue" if null
 color = Nz(color, "Not Specified") ' sets color to "Not Specified" if null 
 ```
 We can even modify our `HandleNull()` function to mimic `Nz()` functionality outside of Access. In this case, `ValueIfNull` defaults to "" if not specified:
-```vb
+```vba
 Public Function HandleNull( Value As Variant, optional ValueIfNull As Variant = "") As Variant
     ' using if then else shorthand
     HandleNull = IIf(IsNull(Value), ValueIfNull, Value)
@@ -103,7 +103,7 @@ End Function
 color = HandleNull(color, "") ' sets color to "" if null
 ```
 Here's how our script could look after adding the code above:
-```vb
+```vba
 Public Function HandleNull( Value As Variant, optional ValueIfNull As Variant = "" ) As Variant
     HandleNull = IIf(IsNull(Value), ValueIfNull, Value)
 End Function
