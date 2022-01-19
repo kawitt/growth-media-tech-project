@@ -13,11 +13,11 @@ cta:
   url: /growth-media-technology-project/
   label: Get Started
   icon_pack: fas
-  icon: tasks
+  icon: hand-point-right
 cta_alt:
   url: /growth-media-technology-project/
   label: View Project Overview
 ---
 <br />
-This is the next step in the interview process for Tinuiti’s Growth Media Technology position, specifically the Technical Specialist, Growth Media. Follow the links below to find solutions to the three tasks provided by Tinuiti.  
+This is the next step in the interview process for Tinuiti’s Growth Media Technology position, specifically the Technical Specialist, Growth Media. Follow the links below to view solutions to the three tasks provided by Tinuiti.  
 <br />
