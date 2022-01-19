@@ -55,7 +55,7 @@ A more robust implementation uses a function to handle null cases. This simplifi
 
 ```vba
 Public Function HandleNull(Value As Variant) As Variant
-    If IsNull(Value) Then 
+    If IsNull(Value) = True Then 
         HandleNull = ""
     Else
         HandleNull = Value
@@ -93,7 +93,7 @@ color = Nz(color, 0) ' sets color to 0 if it's null
 color = Nz(color, "blue") ' sets color to "blue" if null
 color = Nz(color, "Not Specified") ' sets color to "Not Specified" if null 
 ```
-We can even modify our `HandleNull()` function to mimic `Nz()` functionality outside of Access. In this case, `ValueIfNull` defaults to "" if not specified:
+We can modify our `HandleNull()` function to mimic `Nz()` functionality outside of Access. In this case, `ValueIfNull` defaults to "" if not specified:
 ```vba
 Public Function HandleNull( Value As Variant, optional ValueIfNull As Variant = "") As Variant
     ' using if then else shorthand
